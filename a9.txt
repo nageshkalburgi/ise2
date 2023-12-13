@@ -8,6 +8,8 @@ RUN javac hello.java
 CMD ["java", "helloworld"]
 Step 2 :Open the docker desktop and logged in with your account and remember the user n
 Step 3:Open the cmd where your Dockerfile and hello.java files are located and build it
+docker build -t nageshkalburgi/java1-docker .  -> enter -> docker login -> docker push nageshkalburgi/java1-docker
+
 ASSIGNMENT 9
 IT_63_Nagesh Kalburgi
 Step 4:Login to docker
