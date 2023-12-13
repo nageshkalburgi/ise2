@@ -1,6 +1,11 @@
 Build a Dockeí image and push it to Dockeí Hub. Pull it on anotheí system. Cíeateand íun a
 new containeí fíom an image.
 Step1: cíeate java file and dockeífile and keep them in same foldeí
+FROM openjdk:latest
+WORKDIR /usr/src/app
+COPY hello.java
+RUN javac hello.java
+CMD ["java", "helloworld"]
 Step 2 :Open the docker desktop and logged in with your account and remember the user n
 Step 3:Open the cmd where your Dockerfile and hello.java files are located and build it
 ASSIGNMENT 9
