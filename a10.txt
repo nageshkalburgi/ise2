@@ -1,0 +1,62 @@
+DevOps Assignment - 10
+Name : Nagesh Kalburgi
+Create a Jenkins pipeline to build and push Docker Image. Dockerfile, Jenkinsfile and the
+application(for which image will be built) shall be stored in a GitHub Repository.
+Step 1: push java web app on github
+Step 2: create new pipeline
+Step 3 : Follow this configuration
+For the checkout we can use pipeline syntax
+Step 4 : build pipeline
+
+Step :
+5 Create Dockerfile
+FROM maven:3.6.3-openjdk-11-slim
+# Set the working directory in the container
+WORKDIR /usr/src/app # Copy the Maven
+project files into the container
+COPY pom.xml .
+COPY src ./src
+# Build the application
+RUN mvn clean install
+# Expose the port the app runs on
+EXPOSE 8080
+# Define the command to run your application
+CMD ["java", "-jar", "target/your-application.jar"]
+6 Add build docker step to configuration
+Step :
+Step 7 : save and build
+Docker image is created
+Step :
+8 add dockerhub credentials in configuration
+1. Create pipeline syntax
+Step :
+In secret block type password of dockerhub
+2. Configure
+Complete
+script pipeline{
+agent any
+tools{
+maven 'Maven'
+}
+stages{ stage('Build
+maven'){ steps{
+checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs:
+[[url: 'https://github.com/VedantK1610/vedant_web.git']]) bat 'mvn clean install'
+}
+}
+stage('build-dockerimage'){ steps{ script{
+bat 'docker build -t vedantk1610/webapp .'
+}
+}
+}
+stage('push image to dockerhub'){ steps{ script{ withCredentials([string(credentialsId:
+'dockerhubpwd', variable: 'dockerhubpwd')]) { bat 'docker login -u vedantk1610 -p
+${dockerhubpwd}'
+}
+bat 'docker push vedantk1610/devops-integration.'
+}
+}
+}
+}
+}
+Step 9 : build and image will be pushed to dockerhub

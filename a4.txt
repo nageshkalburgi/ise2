@@ -1,0 +1,16 @@
+Create a Jenkins pipeline to execute any Java Application. Keep the application &
+Jenkinsfile on Github.
+Prerequisites:Jenkins,GitHub Account ,Java installed on system (jdk)
+1)go to localhost:8080 and click on new Item create a Pipeline Project
+2)Under Build triggers click on github hook trigger for GITScm polling
+3)select “Pipeline script from scm” and paste the link of git hub repo
+ ASSIGNMENT 8 DevOps
+IT_BE_41_Himanshu Shukla
+Here I have created a simple Hello world java program along with a pipeline script (file
+name of pipeline script should to be strictly Jenkinsfile and branch preferred to be master)
+(link) It is preferred to once to go through jenkinsfile(pipeline script)
+Go to jenkins page again and paste the https link of github there
+Script path should to be Jenkinsfile
+Click apply and save
+Step 4: Now click on “build Now” button to build it. So here java program is successfully
+created through pipeline 

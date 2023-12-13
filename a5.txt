@@ -1,0 +1,49 @@
+1) Set up a Jenkins job that picks up a Java application from a GitHub repository,
+builds it, and runs it.
+Prerequisite: github account, jenkins installed on system(click), jdk 11/17/22(any
+one)
+So lets create and run a job in jenkins for simple java application
+1)after Installing the jenkins go to the localhost:8080
+2)Now click on “manage jenkins” with setting icon on left side bar then go to
+“plugins” after that click on “available plugins” and search for three main
+plugins
+a)github integration plugins
+b)maven integration
+c)maven invoker,and install all this
+ ASSIGNMENT 5 DevOps
+IT_BE_41_Himanshu Shukla
+Now all has been installed
+Again go to dashboard click on manage jenkins then click on “tools” and scroll
+to the bottom under maven installation add maven the click on save and apply
+3)go to dashboard and click on new item and named the job as “simple_java”
+and click on second option “maven project” then click ok(It is imp to click on
+maven project)
+4) now click on source code management and click on git and paste the HTTPS
+URL of simple java based application from github(the chosen repo of github
+should to be public and must contain pom.xml[maven] )
+Here below I have chosen a random repo(click) of someone of basic java
+application of hello world
+Now just copy the HTTPS url and paste in repository url ,scroll down in build
+section under goals and action write “clean install package”
+then scroll to bottom and click on save
+5)after that click on “build now” from left side bar of main dashboard and below there will
+be the build history
+6)Now just click on that tick and after that click on output console on left side bar
+Here the java application of hello world has been build and run using the jenkins job.
+b) Set up a Jenkins job that picks up a python application from a GitHub
+repository, builds it, and runs it.
+Before this go to Manage jenkins>Plugins>Available plugins and install
+python (like we have install other 3 plugin previously for java )
+prior just copy your path where python was installed and go to “manage jenkins” >
+click on “system” scroll utpo global properties change the name:path and in value
+put your path then click on apply and save
+1)go to dashboard create a new item named simple_python click on freestyle project and
+click ok
+2)now just open a random git repo(click) of simple python program, copy the HTTPS Url and
+paste it in repository url
+3)Scroll down under build step click on execute window batch command and
+write this as given
+After this scroll to bottom click on apply and save
+4)after this it will redirect you to your created job now just click on “build now”
+Just click on green tick it will lead to output console
+5) now the python application has been successfully build and runned

@@ -1,0 +1,11 @@
+Build a Dockeí image and push it to Dockeí Hub. Pull it on anotheí system. Cíeateand íun a
+new containeí fíom an image.
+Step1: cíeate java file and dockeífile and keep them in same foldeí
+Step 2 :Open the docker desktop and logged in with your account and remember the user n
+Step 3:Open the cmd where your Dockerfile and hello.java files are located and build it
+ASSIGNMENT 9
+IT_63_Nagesh Kalburgi
+Step 4:Login to docker
+Step 5:push to docker hub
+Step 6:login to docker and check the image
+Step 7:run the image which is now pushed
